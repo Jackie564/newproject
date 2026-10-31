@@ -48,12 +48,19 @@
             <span id="charCount">0 / 12,000 characters</span>
             <span>Keep private information out of your notes.</span>
           </div>
+          <label for="fileInput"
+            >Or upload a document (.pdf, .docx, .txt, .md)</label
+          >
+          <input type="file" id="fileInput" accept=".pdf,.docx,.txt,.md" />
           <div class="actions">
             <button id="summarizeBtn" class="primary" type="button">
               ✦ Revive summary
             </button>
             <button id="questionsBtn" class="secondary" type="button">
               ☾ Create questions
+            </button>
+            <button id="clearBtn" class="text-button" type="button">
+              Clear
             </button>
           </div>
           <p class="notice">
@@ -101,6 +108,9 @@
 
       <footer>Built as an open-source learning project · LazyStudy AI</footer>
     </main>
+    <!-- libraries that read PDF and Word files in the browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
